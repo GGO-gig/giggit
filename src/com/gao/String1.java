@@ -61,18 +61,18 @@ public class String1 {
 		//将字符串中的标点符号用空格代替,在用空格分割，每行长度代表单词数
 		System.out.println("标点符号用空格代替分割：");
 		for (int i = 0; i < s.length; i++) {
-			String[] si=s[i].trim().replace(","," ").replace(".", " ").split(" ");
+			String[] si=s[i].replace(","," ").replace(".", " ").trim().split(" ");
 			for (int j = 0; j < si.length; j++) {
-				System.out.print(si[j]+"+");
+				System.out.print(si[j]+" ");
 			}
 			System.out.println(si.length);
 		}
 		
 		//采用选择排序法，按每行单词个数降序排列
 		for (int i = 0; i < s.length; i++) {
-			String[] si=s[i].trim().replace(","," ").replace(".", " ").split(" ");
+			String[] si=s[i].replace(","," ").replace(".", " ").trim().split(" ");
 			for (int j = i+1; j < s.length; j++) {
-				String[] sj=s[j].trim().replace(","," ").replace(".", " ").split(" ");
+				String[] sj=s[j].replace(","," ").replace(".", " ").trim().split(" ");
 				if(si.length<sj.length) {
 					String k=s[i];
 					s[i]=s[j];
